@@ -11,11 +11,11 @@ public class CapsLock {
         if(s.length() > 0) {
             char firstLetter = s.charAt(0);
             if(Character.isLowerCase(firstLetter)) {
-                s = Character.toUpperCase(firstLetter) + s.substring(1).toUpperCase();
-            }else if()
-        }
+                s = s.substring(0).toUpperCase();
+            }
 
         System.out.println(s);
         sc.close();
     }
+}
 }
