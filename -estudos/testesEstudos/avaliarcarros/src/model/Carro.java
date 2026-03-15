@@ -41,14 +41,5 @@ public class Carro {
     public void setPontosNegativos(String pontosNegativos) {
         this.pontosNegativos.add(pontosNegativos);
     }
-
-
-    public void AdicionarPontoPositivo(String pontoPositivo){
-        this.pontosPositivos.add(pontoPositivo);
-    }
-
-    public void AdicionarPontoNegativo(String pontoNegativo){
-        this.pontosNegativos.add(pontoNegativo);
-    }
     
 }

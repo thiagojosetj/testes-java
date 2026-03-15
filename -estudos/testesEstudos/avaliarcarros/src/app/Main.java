@@ -1,9 +1,11 @@
 package avaliarcarros.src.app;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import avaliarcarros.src.*;
 import avaliarcarros.src.model.Carro;
+import avaliarcarros.src.service.CarroService;
 
 public class Main {
     public static void main(String[] args){
@@ -12,6 +14,8 @@ public class Main {
 
         String entrada = "", nomeCarro;
         int escolha = 999;
+
+        ArrayList<CarroService> carroService = new ArrayList<>();
 
         while(escolha != 0){
 
@@ -41,6 +45,10 @@ public class Main {
                 
                 case 1:
 
+                    for (CarroService carros : carroService) {
+                        System.out.println(carros);
+                    }
+
                     break;
 
                 case 2:
@@ -52,7 +60,7 @@ public class Main {
                     System.out.print("Digite o nome do carro a ser adicionado: ");
                     nomeCarro = sc.nextLine();
 
-                    Carro carro = new Carro(nomeCarro);
+                    carroService.add(new CarroService(nomeCarro));
 
                     break;
 
